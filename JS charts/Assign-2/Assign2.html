@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assign2</title>
+    <script src="http://d3js.org/d3.v4.min.js"></script>
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>-->
+    <script src = "Assign_2.js"></script>
+    <script src="radarChart.js"></script>
+    <link rel="stylesheet" type="text/css" href="assign-2.css">
+    <style>
+        svg#winner_bubble{
+            margin: auto;
+            display:block;
+        }
+    </style>
+</head>
+<body>
+<center><h1>10 Years AUS Open Match Statistics</h1></center>
+<div id="container"></div>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+<!--        <p>Some text in the Modal..</p>-->
+    </div>
+</div>
+<script>
+    plot();
+    var modal = document.getElementById("myModal");
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function(){
+        modal.style.display = "none";
+        var playerElement = document.getElementById("playerName");
+        playerElement.parentNode.removeChild(playerElement);
+        var playerTitles = document.getElementById("playerTitles");
+        playerTitles.parentNode.removeChild(playerTitles);
+    };
+</script>
+</body>
+</html>
